@@ -8,9 +8,14 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should save a task with title and description.', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('SimpleAppAutomatedTestingSample app is running!');
+    expect(page.getTitleText()).toEqual('');
+  });
+
+  it('should save a task with title and no description.', () => {
+    page.navigateTo();
+    expect(page.getTitleText()).toEqual('');
   });
 
   afterEach(async () => {
