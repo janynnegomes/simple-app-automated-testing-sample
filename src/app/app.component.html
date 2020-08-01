@@ -16,15 +16,29 @@
   <section id="newTask">
     <form class="card-container" id="formNewTask" [formGroup]="formTask" 
     (ngSubmit)="saveNewTask()">
-    <div class="form-field" [ngClass]="{'error':(formTask.controls.title.touched || formTask.controls.title.dirty) &&formTask.controls.title?.errors}">
+    <div class="form-field" id="form-field-title" [ngClass]="{'error':(formSubmited ||formTask.controls.title.touched || formTask.controls.title.dirty) &&formTask.controls.title?.errors}">
       <input #inputTitle id="title" type="text" formControlName="title" placeholder="Title ...">
     </div>      
-    <div class="form-field">
+    <div class="form-field"  id="form-field-description" > 
       <textarea id="description" formControlName="description" placeholder="Description ..."></textarea>
     </div>     
     <input type="submit" id="btnSaveTask" class="button" value="Save" >
     </form>
   </section>  
+
+  <div class="tasks-container">
+    <a class="card empty-list" target="_blank" rel="noopener"  *ngIf="allTasks.length === 0">
+      <span><b class="title">{{emptyList.title}}</b></span> &nbsp;
+      <span class="description">{{emptyList.description}}</span>
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <path fill="currentColor" d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" /></svg>    
+    </a>
+    <a class="card task" target="_blank" rel="noopener"  *ngFor="let task of allTasks">
+      <svg *ngIf="!task[1].done" class="material-icons action" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z" /></svg>    
+      <svg *ngIf="task[1].done"class="material-icons action" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" /></svg>    
+      <span  class="title"><b>{{task[1].title}}</b></span>.&nbsp;
+      <span class="description">{{task[1].description}}</span>      
+    </a>
+  </div>
 
   <!-- Footer -->
   <footer>

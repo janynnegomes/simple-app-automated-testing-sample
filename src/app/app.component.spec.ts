@@ -26,6 +26,13 @@ describe('AppComponent', () => {
     expect(app.title).toEqual(mock.title);
   });
 
+  it(`should have a list(Map) of tasks`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.tasks).toBeInstanceOf(Map)
+    expect(app.allTasks).toBeInstanceOf(Array)
+  });
+
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
