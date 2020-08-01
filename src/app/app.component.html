@@ -6,19 +6,23 @@
     alt="Angular Logo"
     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABoklEQVRo3u2YvU7DMBSFj0slJiQoI+0IKyOPwMzACuU9GJlBPAADKz8jZYC54ucNEK9QBBkQEqCPJZFKlKSt0/TS4k/KEse+5/g613GkwIwB1IE28Ai8x9cDsAvMWesbJH4JuCefO2DRWmee+LkB4hO6QM1ab5aB9hDiE3YmJaoJnAPRCOISruL+TaDj0T8CLoHVMuJ7HoETmn1jtUqM0wNW8nQWrcUjSY2JpLqYhqRDnwz4LJt+OvHMt4DrkmO95ul0BQawnvpfQp3L1Pr3ytmIBAPWBAPW1H07pquCVdX6vxlIZjyvPicMak+PNypTn4FgwBrvd2BYqq5OIQPWX61Tn4FgwBpvAy6FpHlJ+5M24H2kzPpEABYkRZUIHfeRMnXoPohv72UFHoaxOx7hj8Fx/Pw28JVuHFe8qgycAA7YAj7LBLYwcArUgE3go2xgXwNl/gvVnXPfHv28GPtLnCXegtInMmtmeieuZEPy5M3HwK216j5u8hqKqtCapK6kZWPxL5I2nHPPWY25GXDOPUlal3Qmm+UUSbooEh8IBAL2/AB33q2PSp2oBQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0wNy0zMVQwMjoyNjoxNCswMDowMLabf+wAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDctMzFUMDI6MjY6MTQrMDA6MDDHxsdQAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg=="
   />
-  <span>{{title}}</span>
-    
-  <button id="btnNewTask" class="button" >+New</button>
+  <span>{{title}}</span>   
+  
 </div>
 
 <div class="content" role="main"> 
 
   <!-- Tasks -->  
   <section id="newTask">
-    <form class="card-container" id="formNewTask" >
-      <input id="title" type="text" formControlName="title" placeholder="Title ...">
+    <form class="card-container" id="formNewTask" [formGroup]="formTask" 
+    (ngSubmit)="saveNewTask()">
+    <div class="form-field" [ngClass]="{'error':(formTask.controls.title.touched || formTask.controls.title.dirty) &&formTask.controls.title?.errors}">
+      <input #inputTitle id="title" type="text" formControlName="title" placeholder="Title ...">
+    </div>      
+    <div class="form-field">
       <textarea id="description" formControlName="description" placeholder="Description ..."></textarea>
-      <input type="submit" id="btnAddTask" class="button" value="Save">
+    </div>     
+    <input type="submit" id="btnSaveTask" class="button" value="Save" >
     </form>
   </section>  
 

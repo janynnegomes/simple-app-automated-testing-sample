@@ -22,13 +22,28 @@
 
 
   form{
-      input, textarea{
-          border: solid 1px #dbd9d9;
-          border-radius: 2px;
-          margin-left: 2px;
-          padding: 4px;
-          font-family: Arial, Helvetica, sans-serif;
-      }
+      .form-field{
+        input[type='text'], textarea{
+            border: solid 1px #dbd9d9;
+            border-radius: 2px;
+            margin-left: 2px;
+            padding: 4px;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 32px;
+            color: #a5a5a5;
+        }
+
+        &.error{
+            input, textarea{
+            border-color: #b62626  !important;
+            color: #b62626;
+            
+            &::placeholder{
+                color: #b62626;
+            }
+            }
+        }
+      }      
   }
   .spacer {
     flex: 1;
@@ -207,23 +222,21 @@
   .button{
     text-align: center;
     min-width: 60px;
-    color: #24292e;
+    color: #fff;
     display: flex;
     align-items: center;
     font-size: 12px;
     padding: 3px 10px;
-    border: 1px solid rgba(27,31,35,.2);
+    border: 0;
     border-radius: 3px;
-    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    background: #1976d2;
     margin-left: 4px;
     font-weight: 600;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   }
 
   .button:hover {
-    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-    border-color: rgba(27,31,35,.35);
-    background-position: -.5em;
+    background: #3877b6;
   }
 
   .button.material-icons {
