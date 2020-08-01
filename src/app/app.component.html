@@ -8,16 +8,25 @@
   />
   <span>{{title}}</span>
     
+  <button id="btnNewTask" class="button" >+New</button>
 </div>
 
 <div class="content" role="main"> 
 
+  <!-- Tasks -->  
+  <section id="newTask">
+    <form class="card-container" id="formNewTask" >
+      <input id="title" type="text" formControlName="title" placeholder="Title ...">
+      <textarea id="description" formControlName="description" placeholder="Description ..."></textarea>
+      <input type="submit" id="btnAddTask" class="button" value="Save">
+    </form>
+  </section>  
 
   <!-- Footer -->
   <footer>
       Janynne Gomes  &nbsp;
       <a href="https://github.com/janynnegomes" target="_blank" rel="noopener"> Follow me on Github
-        <div class="github-star-badge">
+        <div class="button">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
           Follow
         </div>
