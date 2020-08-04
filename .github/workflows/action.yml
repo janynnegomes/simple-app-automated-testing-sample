@@ -11,7 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Angular
-      uses: ./
       with:
         github_access_token: ${{ secrets.ACCESS_TOKEN }}
         build_configuration: production 
