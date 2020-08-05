@@ -25,17 +25,9 @@ jobs:
     - name: Angular Deploy gh-pages Actions
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.0
       with:
-        # Github access token token used to deploy on gh_pages. You can find it on Github.
         github_access_token: ${{ secrets.ACCESS_TOKEN }}
         angular_project_dir: ./
         build_configuration:  production
-        # base href for the app
-        base_href: # optional, default is /
-        # branch on which the angular build will be deployed
         deploy_branch: gh-pages
-        # The folder in which `ng build` provides its output. This is the folder which will be deployed to the `deploy_branch`.
         angular_dist_build_folder: dist/project
-        # If the action should run 'ng lint'
-        run_lint: # optional
-        # Will not fail the step if anything fails
-        skip_failure: # optional
+        skip_failure: false
