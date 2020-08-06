@@ -22,6 +22,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    - name: Unit Test
+      run: npm run test
+   
+    - name: UI Automated Test
+      run: npm run e2e
+
     - name: Angular Deploy gh-pages Actions
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.0
       with:
