@@ -13,26 +13,26 @@ export class AppPage {
     return element(by.id('formNewTask')).getWebElement();
   }
 
-  getFormField(name:string): WebElementPromise {
-    return element(by.css('#form-field-'+name)).getWebElement() as WebElementPromise
+  getFormField(name: string): WebElementPromise {
+    return element(by.css('#form-field-' + name)).getWebElement() as WebElementPromise;
   }
 
   getInputTitle(): WebElementPromise {
-    return element(by.css('#formNewTask input#title')).getWebElement() as WebElementPromise
+    return element(by.css('#formNewTask input#title')).getWebElement() as WebElementPromise;
   }
   getInputDescription(): WebElementPromise {
-    return element(by.css('#formNewTask textarea#description')).getWebElement() as WebElementPromise
+    return element(by.css('#formNewTask textarea#description')).getWebElement() as WebElementPromise;
   }
 
-  getButton(id:string): WebElementPromise {
-    return element(by.id(id)).getWebElement() as WebElementPromise
+  getButton(id: string): WebElementPromise {
+    return element(by.id(id)).getWebElement() as WebElementPromise;
   }
 
   getTasks(): WebElementPromise {
-    return element(by.css('.tasks-container .task')).getWebElement() as WebElementPromise
+    return element(by.css('.tasks-container .task')).getWebElement() as WebElementPromise;
   }
 
-  getTasksField(value:string): WebElementPromise {
-    return element(by.css('.tasks-container .task .'+value)).getWebElement() as WebElementPromise
+  getTasksField(value: string): WebElementPromise {
+    return element(by.css('.tasks-container .task .' + value)).getWebElement() as WebElementPromise;
   }
 }

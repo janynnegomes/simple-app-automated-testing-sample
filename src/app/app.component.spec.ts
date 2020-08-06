@@ -1,9 +1,9 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-const mock={
-  title:'Simple App'
-}
+const mock = {
+  title: 'Simple App'
+};
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -29,8 +29,8 @@ describe('AppComponent', () => {
   it(`should have a list(Map) of tasks`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.tasks).toBeInstanceOf(Map)
-    expect(app.allTasks).toBeInstanceOf(Array)
+    expect(app.tasks).toBeInstanceOf(Map);
+    expect(app.allTasks).toBeInstanceOf(Array);
   });
 
   it('should render title', () => {
@@ -40,18 +40,18 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.toolbar span').textContent).toContain(mock.title);
   });
 
-  
+
   it('should render a form for new task', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;  
+    const app = fixture.componentInstance;
     fixture.detectChanges();
 
     const compiled = fixture.nativeElement;
-    
-    expect(compiled.querySelector('#formNewTask input#title')).toBeTruthy()
-    expect(compiled.querySelector('#formNewTask textarea#description')).toBeTruthy()
-    expect(compiled.querySelector('#formNewTask input#btnSaveTask')).toBeTruthy()
- 
+
+    expect(compiled.querySelector('#formNewTask input#title')).toBeTruthy();
+    expect(compiled.querySelector('#formNewTask textarea#description')).toBeTruthy();
+    expect(compiled.querySelector('#formNewTask input#btnSaveTask')).toBeTruthy();
+
   });
-  
+
 });
