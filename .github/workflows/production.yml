@@ -32,3 +32,9 @@ jobs:
         deploy_branch: gh-pages
         angular_dist_build_folder: dist/project
         skip_failure: false
+        
+    - name: Angular coverage badges
+      uses: demyanets/angular-coverage-badges-action@v1
+      with:
+        # Token for the repository. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.ACCESS_TOKEN }}
