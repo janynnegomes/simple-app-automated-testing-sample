@@ -25,7 +25,7 @@ jobs:
       run: npm run build -- --prod
   
     - name: Test
-      run: npm test
+      run: npm run deploy-test
       
     - name: E2E
       run: npm run e2e 
