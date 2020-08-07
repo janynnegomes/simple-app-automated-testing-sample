@@ -8,7 +8,7 @@ env:
   ENVIROMENT_NAME: ${{secrets.ENVIRONMENT_NAME}}
   
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
     
     steps:
@@ -28,7 +28,7 @@ jobs:
       run: npm run test:ci
       
     - name: Deploy on Github Pages
-    - uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.0
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.0
       with:
           github_access_token: ${{ secrets.ACCESS_TOKEN }}
           base_href: https://janynnegomes.github.io/simple-app-automated-testing-sample
