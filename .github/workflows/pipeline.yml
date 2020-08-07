@@ -8,7 +8,7 @@ env:
   ENVIROMENT_NAME: ${{secrets.ENVIRONMENT_NAME}}
   
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
     
     steps:
@@ -22,12 +22,17 @@ jobs:
       run: npm install
       
     - name: Build
-      run: npm run build -- --prod
+      run: npm run build:ci
   
     - name: Test
-      run: npm run deploy-test
+      run: npm run test:ci
       
-    - name: E2E
-      run: npm run e2e 
+    - name: Deploy on Github Pages
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.0
+      with:
+          github_access_token: ${{ secrets.ACCESS_TOKEN }}
+          build_configuration:  production
+          deploy_branch: gh-pages
+          skip_failure: false
       
  
