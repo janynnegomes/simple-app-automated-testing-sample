@@ -30,16 +30,4 @@ jobs:
     - name: E2E
       run: npm run e2e 
       
-  deploy:
-    runs-on: ubuntu-latest
-    steps:   
-      - name: Deploy on Github Pages
-      - uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.0
-        with:
-          github_access_token: ${{ secrets.ACCESS_TOKEN }}
-          base_href: https://janynnegomes.github.io/simple-app-automated-testing-sample
-          angular_project_dir: ./
-          build_configuration:  production
-          deploy_branch: gh-pages
-          angular_dist_build_folder: dist/project
-          skip_failure: false
+ 
