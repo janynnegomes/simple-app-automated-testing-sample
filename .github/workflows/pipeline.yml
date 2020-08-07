@@ -35,7 +35,7 @@ jobs:
           angular_project_dir: ./
           build_configuration:  production
           deploy_branch: gh-pages
-          angular_dist_build_folder: dist/project
+          angular_dist_build_folder: dist
           skip_failure: false
       
  
