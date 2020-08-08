@@ -2,7 +2,7 @@ name: Pipeline Staging
 
 on:
   push:
-    branches: [ stable ]
+    branches: [ staging ]
     
 env:
   ENVIROMENT_NAME: ${{secrets.ENVIRONMENT_NAME}}
