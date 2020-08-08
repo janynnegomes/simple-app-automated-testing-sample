@@ -1,6 +1,6 @@
 # SimpleAppAutomatedTestingSample
 
-This app shows the BDD and TDD aproach of simple app development
+This app shows the BDD and TDD aproach of simple app development.
 
 ## Use cases
 
