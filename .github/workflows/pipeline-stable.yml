@@ -1,8 +1,8 @@
-name: Pipeline Staging
+name: Pipeline
 
 on:
   push:
-    branches: [ staging ]
+    branches: [ stable ]
     
 env:
   ENVIROMENT_NAME: ${{secrets.ENVIRONMENT_NAME}}
@@ -26,3 +26,4 @@ jobs:
   
     - name: Test
       run: npm run test:ci
+ 
