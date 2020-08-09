@@ -1,7 +1,7 @@
 name: Pipeline Production
 
 on:
-  push:
+  pull_request:
     branches: [ master ]
 
 jobs:
