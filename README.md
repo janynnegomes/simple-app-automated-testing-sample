@@ -6,7 +6,7 @@ This app shows the BDD and TDD aproach of simple app development.
 
 1. As an user, i need to save little tasks to organize my activities. The task must have a title and optionaly a description. [DONE]
 2. As an user, i need to see all my tasks in a list. [DONE]
-3. As an user, i need to edit a task. I must keep a title.
+3. As an user, i need to edit a task. I must keep a title. [in progress]
 4. As an user, i need to discard(remove) a task from list.
 5. As an user, i need to mark the task as done.
 
