@@ -1,4 +1,4 @@
-# SimpleAppAutomatedTestingSample
+# Simple App Automated Testing Sample
 
 This app shows the BDD and TDD aproach of simple app development.
 

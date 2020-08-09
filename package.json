@@ -8,8 +8,8 @@
     "test": "ng test --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e --port 4201",
-    "test:ci":"ng test --watch=false --browsers=ChromeHeadless",
-    "build:ci":"ng build --prod"
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
+    "build:ci": "ng build --prod"
   },
   "private": true,
   "dependencies": {
