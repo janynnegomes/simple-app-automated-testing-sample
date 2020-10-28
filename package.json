@@ -8,23 +8,23 @@
     "test": "ng test --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e --port 4201",
-    "test:ci":"ng test --watch=false --browsers=ChromeHeadless",
-    "build:ci":"ng build --prod"
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
+    "build:ci": "ng build --prod"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~9.1.12",
-    "@angular/common": "~9.1.12",
-    "@angular/compiler": "~9.1.12",
-    "@angular/core": "~9.1.12",
-    "@angular/forms": "~9.1.12",
-    "@angular/platform-browser": "~9.1.12",
-    "@angular/platform-browser-dynamic": "~9.1.12",
-    "@angular/router": "~9.1.12",
-    "rxjs": "~6.5.4",
-    "tslib": "^1.10.0",
-    "uuid": "^8.3.0",
-    "zone.js": "~0.10.2"
+    "@angular/animations": "10.0.9",
+    "@angular/common": "10.0.9",
+    "@angular/compiler": "10.0.9",
+    "@angular/core": "10.0.9",
+    "@angular/forms": "10.0.9",
+    "@angular/platform-browser": "10.0.9",
+    "@angular/platform-browser-dynamic": "10.0.9",
+    "@angular/router": "10.0.9",
+    "rxjs": "6.6.2",
+    "tslib": "2.0.1",
+    "uuid": "^8.3.1",
+    "zone.js": "0.10.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.11",
