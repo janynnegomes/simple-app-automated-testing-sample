@@ -7,7 +7,7 @@ This app shows the BDD and TDD aproach of simple app development.
 ## Cypress
 Is a awesome tool for E2E testing used here to simulate al user's interactions to application to get all scenarios described on BDD.
 
-![Video](https://github.com/janynnegomes/simple-app-automated-testing-sample/blob/master/cypress/videos/add-tasks.spec.js.mp4)
+![Video](https://github.com/janynnegomes/simple-app-automated-testing-sample/blob/master/screen-captures/cypress-testing.gif?raw=true)
 
 ## Known Use Cases
 
@@ -23,14 +23,19 @@ Is a awesome tool for E2E testing used here to simulate al user's interactions t
 
 ![Mobile](https://github.com/janynnegomes/simple-app-automated-testing-sample/blob/master/screen-captures/mobile-add-task.png?raw=true)
 
+
+## Install dependencies
+
+Run `npm install`. The project gets all dependencies necessary to run and build the application.
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npm run cypress` to execute the end-to-end tests via Cypress.
