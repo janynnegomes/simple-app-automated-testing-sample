@@ -2,7 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 const mock = {
-  title: 'Simple App'
+  title: 'My Tasks'
 };
 
 describe('AppComponent', () => {
@@ -20,7 +20,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Simple App'`, () => {
+  it(`should have as title 'My Tasks'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual(mock.title);

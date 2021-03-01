@@ -8,8 +8,9 @@ import { v4 as uuid } from 'uuid';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Simple App';
+  title = 'My Tasks';
   emptyList =  {title: 'Nothing here', description: 'You can start adding a new task'};
+  showTaskForm:boolean = false;
   formSubmited = false;
   tasks = new Map<string, {title: string, description: string, done: boolean}>();
 
@@ -37,6 +38,7 @@ export class AppComponent {
       this.formTask.reset();
       this.inputTitle.nativeElement.focus();
 
+      this.showTaskForm = false;
       return true;
     }
     else{
@@ -44,5 +46,13 @@ export class AppComponent {
     }
   }
 
+  closeForm(){
+    this.showTaskForm = false;
+    this.formTask.reset();
+  }
+
+  toggleStatus(){
+
+  }
 
 }
