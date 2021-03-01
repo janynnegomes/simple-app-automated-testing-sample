@@ -1,14 +1,27 @@
-# Simple App Automated Testing Sample
+# Automated Testing - Using Cypress
 
 This app shows the BDD and TDD aproach of simple app development.
 
-## Use cases
+![Overview](https://github.com/janynnegomes/simple-app-automated-testing-sample/blob/master/screen-captures/capa.png?raw=true)
 
-1. As an user, i need to save little tasks to organize my activities. The task must have a title and optionaly a description. [DONE]
-2. As an user, i need to see all my tasks in a list. [DONE]
-3. As an user, i need to edit a task. I must keep a title. [in progress]
-4. As an user, i need to discard(remove) a task from list.
-5. As an user, i need to mark the task as done.
+## Cypress
+Is a awesome tool for E2E testing used here to simulate al user's interactions to application to get all scenarios described on BDD.
+
+![Video](https://github.com/janynnegomes/simple-app-automated-testing-sample/blob/master/cypress/videos/add-tasks.spec.js.mp4)
+
+## Known Use Cases
+
+|ID|Use Case| Status|
+|--|--|--|
+|1 | As an user, i need to save little tasks to organize my activities. The task must have a title and optionaly a description| [DONE]|
+|2 | As an user, i need to see all my tasks in a list. | [DONE] |
+|3 | As an user, i need to edit a task. I must keep a title. | [in progress]|
+|4 | As an user, i need to discard(remove) a task from list.| |
+|5 | As an user, i need to mark the task as done.| [DONE]|
+
+## Mobile Screen Captures
+
+![Mobile](https://github.com/janynnegomes/simple-app-automated-testing-sample/blob/master/screen-captures/mobile-add-task.png?raw=true)
 
 ## Development server
 
