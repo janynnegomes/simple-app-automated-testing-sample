@@ -1,4 +1,4 @@
-# Automated Testing - Using Cypress
+# Automated Testing - Using Cypress in Angular 10
 
 This app shows the BDD and TDD aproach of simple app development.
 
