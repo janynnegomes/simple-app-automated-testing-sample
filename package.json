@@ -9,7 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e --port 4201",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
-    "build:ci": "ng build --prod"
+    "build:ci": "ng build --prod",
+    "cypress": "cypress open",
+    "cypress:run": "cypress run"
   },
   "private": true,
   "dependencies": {

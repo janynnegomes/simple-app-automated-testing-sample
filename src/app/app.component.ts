@@ -51,8 +51,4 @@ export class AppComponent {
     this.formTask.reset();
   }
 
-  toggleStatus(){
-
-  }
-
 }
