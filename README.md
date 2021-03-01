@@ -5,11 +5,13 @@ This app shows the BDD and TDD aproach of simple app development.
 ![Overview](https://github.com/janynnegomes/simple-app-automated-testing-sample/blob/master/screen-captures/capa.png?raw=true)
 
 ## Cypress
-Is a awesome tool for E2E testing used here to simulate al user's interactions to application to get all scenarios described on BDD.
+Cypress is an awesome tool for E2E testing used here to simulate all user's interactions to application to getting all scenarios described on BDD.
 
 ![Video](https://github.com/janynnegomes/simple-app-automated-testing-sample/blob/master/screen-captures/cypress-testing.gif?raw=true)
 
 ## Known Use Cases
+
+The use cases specify funcional requirements of application, what rules must be applied from users perspective, so we defined it to accomplish the task management of a person.
 
 |ID|Use Case| Status|
 |--|--|--|
